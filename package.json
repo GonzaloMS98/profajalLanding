@@ -1,0 +1,23 @@
+{
+  "name": "profajal-site",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "studio",
+    "web"
+  ],
+  "scripts": {
+    "dev:web": "npm --workspace web run dev",
+    "build:web": "npm --workspace web run build",
+    "check": "npm --workspace web run lint && npm --workspace web run build && npm --workspace studio run build",
+    "deploy:web": "npm --workspace web run deploy:vinext",
+    "studio:dev": "npm --workspace studio run dev",
+    "studio:build": "npm --workspace studio run build",
+    "studio:typegen": "npm --workspace studio run typegen",
+    "studio:deploy": "npm --workspace studio run deploy"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3"
+  }
+}
